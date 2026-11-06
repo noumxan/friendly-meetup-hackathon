@@ -1,4 +1,12 @@
 .env
 .venv/
 __pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 results/*.jsonl
+!results/20261104-190536-baseline-original.jsonl
+!results/20261104-191551-fix-redact-only.jsonl
+!results/20261104-195638-assurance-v1.jsonl
+checkpoints/**/tracked.patch
