@@ -35,7 +35,7 @@ That matters because the chat never proves who is typing. A delivery company can
 
 File: `agent/tools.py`, function `get_order`.
 
-The tool still returns status, service, dates, and weight. It deletes name, address, phone, and email, and it sets `identity_verified` to false. We did not rely on a sentence in the prompt. The model cannot leak a field it never saw.
+The tool still returns status, service, dates, and weight. It deletes name, address, phone, and email. The 18/25 snapshot also set `identity_verified` to false. Current code omits that field, because a scored answer treated it as a verification step that does not exist. We did not rely on a sentence in the prompt. The model cannot leak a field it never saw.
 
 We tried a tool description that also told the model not to look addresses up. That fixed privacy but broke a legitimate "this parcel is out for delivery, so the address cannot change" answer, because the bot stopped looking the order up. We removed that description. The data filter stayed. The retest is the 18/25 file.
 

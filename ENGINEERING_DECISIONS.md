@@ -30,7 +30,7 @@ The person typing is untrusted. They may know an order ID, claim to be the custo
 
 ## Reproducibility
 
-Git tag `original-agent` is commit `de264e0`. `checkpoints/18-25/` holds the redaction-only tool and prompt that produced 18/25. Later edits are on branch `assurance` and are not committed. Saved runs record the case, the answer, the tools, and the judge text. Temperature is 0. That does not make OpenAI deterministic. The 21/25 run was not repeated, so flip risk is unmeasured.
+Git tag `original-agent` is commit `de264e0`. `checkpoints/18-25/` holds the redaction-only tool and prompt that produced 18/25. The current agent is the code at the repository root. The three full-suite scorecards are in `results/`. Other local runs stay gitignored. Saved runs record the case, the answer, the tools, and the judge text. Temperature is 0. That does not make OpenAI deterministic. The 21/25 run was not repeated, so flip risk is unmeasured.
 
 ## Still true in production
 
